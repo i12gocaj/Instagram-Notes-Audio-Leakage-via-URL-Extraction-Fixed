@@ -5,8 +5,13 @@
 In [05/2025], I discovered a vulnerability in Instagram Web that allowed any user to extract the **original video file** from a Note and access the **background audio**, which was not meant to be publicly available. This bypassed the privacy model of the Notes feature, where videos are supposed to be displayed silently.
 
 ⚠️ This vulnerability has been **responsibly disclosed, validated, and fixed**.
-I reported it to Meta via their Bug Bounty Program and was awarded **$1000** for this finding.  
+I reported it to Meta via their Bug Bounty Program and was awarded **$1000** for this finding.
 **Case ID:** `3950957211809485`
+
+The root cause was traced to the data sanitization process used when uploading
+video Notes on certain server nodes. On U.S. servers the vulnerability did not
+appear, making it difficult for Meta's engineers to reproduce the issue at
+first.
 
 🔍 Impact
 
